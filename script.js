@@ -1,6 +1,6 @@
 window.onload = () => {
   const button = document.querySelector('button[data-action="change"]');
-  button.innerText = '﹖';
+  button.innerText = 'Change';
 
   let places = staticLoadPlaces();
   renderPlaces(places);
@@ -27,23 +27,23 @@ function staticLoadPlaces() {
 
 var models = [
   {
-      url: './assets/magnemite/scene.gltf',
-      scale: '2 2 2',
-      info: 'Magnemite, Lv. 5, HP 10/10',
-      rotation: '180 0 0',
-  },
-  {
       url: './assets/kratos/scene.gltf',
       scale: '2 2 2',
       rotation: '180 0 0',
       info: 'Articuno, Lv. 80, HP 100/100',
   },
   {
+      url: './assets/magnemite/scene.gltf',
+      scale: '2 2 2',
+      info: 'Magnemite, Lv. 5, HP 10/10',
+      rotation: '180 0 0',
+  },
+  {
       url: './assets/scene/scene.gltf',
       scale: '2 2 2',
       rotation: '180 0 0',
       info: 'Dragonite, Lv. 99, HP 150/150',
-  },
+  }
 ];
 
 var modelIndex = 0;
