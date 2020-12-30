@@ -9,10 +9,10 @@ window.onload = () => {
 function staticLoadPlaces() {
  return [
      {
-         name: 'Magnemite',
+         name: 'Maury',
          location: {
-             lat: 44.496470,
-             lng: 11.320180,
+            lat: 41.966133735889414,
+            lng: 12.660829397694757 
          }
      },
      {
