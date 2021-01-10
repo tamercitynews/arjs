@@ -171,21 +171,21 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       }
 
       // Called every time a XRSession requests that a new frame be drawn.
-      // function onXRFrame(t, frame) {
-      //   let session = frame.session;
-      //   let refSpace = session.isImmersive ?
-      //                    xrImmersiveRefSpace :
-      //                    inlineViewerHelper.referenceSpace;
-      //   let pose = frame.getViewerPose(refSpace);
+      function onXRFrame(t, frame) {
+        let session = frame.session;
+        let refSpace = session.isImmersive ?
+                         xrImmersiveRefSpace :
+                         inlineViewerHelper.referenceSpace;
+        let pose = frame.getViewerPose(refSpace);
 
-      //   scene.startFrame();
+        scene.startFrame();
 
-      //   session.requestAnimationFrame(onXRFrame);
+        session.requestAnimationFrame(onXRFrame);
 
-      //   scene.drawXRFrame(frame, pose);
+        scene.drawXRFrame(frame, pose);
 
-      //   scene.endFrame();
-      // }
+        scene.endFrame();
+      }
 
       // Start the XR application.
       initXR();
